@@ -21,5 +21,5 @@ age += "1"
 print(age)
 print("\n")
 
-name = bool(name)
+name = bool(name) #Will always be true with non-empty string, flase with empty
 print(name)
