@@ -22,12 +22,12 @@ print(pi)
 
 '''
 
-import exe36
+import Additional_Files.Exercise_39.exe39 as exe39
 
-result = exe36.pi
-result = exe36.square(3)
-result = exe36.cube(3)
-result = exe36.circunference(3)
-result = exe36.area(3)
+result = exe39.pi
+result = exe39.square(3)
+result = exe39.cube(3)
+result = exe39.circunference(3)
+result = exe39.area(3)
 
 print(result)
