@@ -3,8 +3,18 @@ import java.util.Scanner;
 //Checking average of numbers given by user
 public class App {
     public static void main(String[] args) throws Exception {
-        addBinaryNum();
+        //addBinaryNum();
 
+        //BubSort();
+
+        //selectSort();
+
+        //insertSort();
+
+        //reverseString();
+
+        //evenOrOdd();
+        checkPalindrome();
         /*Scanner userIn = new Scanner(System.in);
 
         //Getting user input: First number
@@ -31,8 +41,143 @@ public class App {
         
     }
 
+    //Bubble Sort
+    static void BubSort(){
+        int[] nums = {7, 3, 9, 12, 11, 5, 3, 8, 66};
+
+        for (int i = 0; i < nums.length; i++){
+            for (int j = 0; j < nums.length - 1; j++){
+                int compVal = nums[j+1];
+
+                if (compVal < nums[j]){
+                    nums[j+1] = nums[j];
+                    nums[j] = compVal;  
+                }
+            }
+        }
+
+        for (int num: nums){
+            System.out.print(num + ", ");
+        }
+        
+    }
+
+    //Selection Sort (lowest value)
+    static void selectSort(){
+        int[] nums = {7, 3, 9, 12, 11, 5, 3, 8, 66};
+
+        for (int i = 0; i < nums.length; i++){
+
+            int minIndex = i;
+
+            for (int j = i + 1; j < nums.length ; j++){
+                
+                if (nums[j] < nums[minIndex]){
+                    minIndex = j;
+                }
+            }
+
+            int temp = nums[i];
+            nums[i] = nums[minIndex];
+            nums[minIndex] = temp;
+        }
+
+        for (int num: nums){
+            System.out.print(num + ", ");
+        }
+
+    }
+
+    //Insertion Sort
+    static void insertSort(){
+        int[] nums = {64, 34, 25, 12, 22, 11, 90, 5};
+
+        for (int i = 1; i < nums.length; i++){
+            int insertIndex = i;
+            int cVal = nums[i];
+
+            for (int j = i - 1; j >= 0 ; j--){
+                if (nums[j] > cVal){
+                    nums[j+1] = nums[j];
+                    insertIndex = j;
+                }
+            }
+
+            nums[insertIndex] = cVal;
+        }
+
+        for (int num: nums){
+            System.out.print(num + ", ");
+        }
+    }
+
+
+    //Reverse a string
+    static void reverseString(){
+        String name = "Alejandro";
+        StringBuilder reverse = new StringBuilder();
+
+        for (int i = name.length()-1; i >=0; i--){
+            char temp = name.charAt(i);
+            reverse.append(temp);
+        }
+
+        System.out.println(reverse);
+
+    }
+
+    //Even or odd
+    static void evenOrOdd(){
+        int num = 5;
+
+        if (num % 2 == 0){
+            System.out.println("Even");
+        }
+        else{
+            System.out.println("Odd");
+        }
+    }
+
+    //Palindrome Check
+    static void checkPalindrome(){
+        StringBuilder check = new StringBuilder("racecar");
+        boolean pCheck = true;
+
+        for (int i = check.length() -1; i > 0; i--){
+            int index = (check.length()-1) - i;
+            
+            if (check.charAt(index) == check.charAt(i)){
+                System.out.println(check.charAt(i) + ": Match");
+
+                continue;
+            }
+            else{
+                System.out.println(check.charAt(i) + ": No Match");
+                pCheck = false;
+            }
+
+           
+        }
+
+        if (pCheck){
+            System.out.println("String is a palindrome");
+        }else{
+            System.out.println("String is NOT a palindrome");
+        }
+    }
+
+    static void debugTest(String[] strArr){
+         
+    
+         // code goes here
+    StringBuilder arrElement = new StringBuilder();
+    StringBuilder arrCompElement = new StringBuilder();
+    StringBuilder strOut = new StringBuilder();
+    }
+
+
     //Adding binary numbers
-    public static void addBinaryNum(){
+    static void addBinaryNum(){
         Scanner binNum = new Scanner(System.in);
 
         //Geting binary values
