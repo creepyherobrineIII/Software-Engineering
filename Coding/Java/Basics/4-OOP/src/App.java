@@ -7,5 +7,7 @@ public class App {
         rx7.setDrivetrain("RWD");
 
         rx7.printCarDetails();
+        
+        Monopoly megaEdition = new Monopoly();
     }
 }
