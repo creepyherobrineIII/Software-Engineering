@@ -9,12 +9,21 @@ public class App {
         GameServer amoungUs = new GameServer(){
             public void bootUp(){
                 System.out.println("Game server is now online");
-                
             }
         };
 
         amoungUs.bootUp();
+        Difficulty gameDifficulty = Difficulty.Normal;
     }
+
+    //Enum (Can be used like classes - except that members are public, static and final)
+        enum Difficulty{
+            Easy,
+            Normal,
+            Hard,
+            Very_Hard,
+            Extreme
+        };
     
 }
 
