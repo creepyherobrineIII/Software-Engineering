@@ -1,5 +1,6 @@
 package oop.advanced;
 
+//Utilising abstract classes and interfaces
 public abstract class Server implements Computer{
     String mainProcessor;
     int numCores;
