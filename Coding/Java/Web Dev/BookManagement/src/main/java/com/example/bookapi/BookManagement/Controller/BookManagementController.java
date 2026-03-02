@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 class BookManagementController {
     @GetMapping("/")
     void getAllBooks(){
-        
+
     }
 
     @GetMapping("/{@requestedId}")
